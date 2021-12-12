@@ -1,3 +1,16 @@
+:root{
+    --maincolor: #d3e0fc;
+    --buttoncolor:#1c51bb;
+    --buttonhover:#254583;
+    --grey:#555;
+    --black:rgb(34, 34, 34);
+    --lightblue:rgb(47, 47, 207);
+    --iconhover:#3b7ffd;
+    --mainfont:'DM Sans';
+    --otherfont:'poppins';
+    --mutedcolor:rgb(202, 202, 202);
+
+}
 *{
     padding: 0;
     margin: 0;
@@ -5,23 +18,28 @@
     max-width: 100%;
 }
 
+a{
+    color: var(black);
+    text-decoration: none;
+}
+
 html{
     font-size: 62.5%;
-    color: #555;
+    color: var(--grey)
 }
 
 body{
-    background-color:#d3e0fc;
+    background-color:var(--maincolor);
     font-family: sans-serif;
     font-weight: 400;
     line-height: 1;
 }
 
 h1{
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--mainfont);
 }
 p{
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--otherfont);
     font-size: 1.6rem;
 }
 
@@ -75,11 +93,11 @@ p{
     max-height:5.2rem;
     border-radius: 50%;
     margin-right: -1rem;
-    border: 5px solid #d3e0fc;
+    border: 5px solid var(--maincolor);
 }
 
 a{
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--mainfont);
     font-size: 1.2rem;
 }
 
@@ -93,13 +111,13 @@ a{
 }
 .userp>span{
     font-size: 1.6rem;
-    color: rgb(25, 50, 177);
+    color: var(--buttoncolor);
     font-weight: 1000;
     
 }
 .btn:link, .btn:visited{
     display: inline-block;
-    background-color: #1c51bb;
+    background-color: var(--buttoncolor);
     font-size: 1.2rem;
     border-radius: 20px;
     color: #ffff;
@@ -109,7 +127,7 @@ a{
 }
 
 .btn:hover{
-    background-color: #254583;
+    background-color: var(--buttonhover);
 }
 .header{
     width: 100%;
@@ -177,4 +195,146 @@ a{
 
 .male_img{
     width: 100%;
+}
+h3{
+    font-family: var(--otherfont);
+}
+
+footer{
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    height: auto;
+    width: 100vw;
+    font-family: var(--otherfont);
+    padding-top: 40px;
+    color: var(--mutedcolor);
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    transform: scale(2);
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: var(--mutedcolor);
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: var(--iconhover);
+}
+
+.footer-bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 900px) {
+    .upper{
+        padding-top: 0;
+    }
+    .heading_text{
+        padding-top: 0;
+    }
+    .main{
+        gap: 1.6rem;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        position: relative;
+        top: 0;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .user{
+        position: relative;
+        bottom: 40px;
+    }
+    .userimg>img{
+        max-width: 4rem;
+        max-height:4rem;
+        border-radius: 50%;
+        margin-right: -1rem;
+        border: 5px solid var(--maincolor);
+    }
+    .image_container{
+        position: relative;
+        bottom: 5vh;
+    }
+    .main-nav-list{
+        gap: 5px;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited{
+        font-size: 1.6rem;
+  
+    
+        }
+    
+  }
+
+  @media screen and (max-width: 640px) {
+    .main-nav-link:link,
+    .main-nav-link:visited{
+        font-size: 1.2rem;
+    }
+
+    .logotype{
+        font-size: 2rem;
+    }
+
+  }
+
+  /* REUSABLE STYLE */
+.reuseableMain{
+    margin: auto;
+    width: 130rem;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
